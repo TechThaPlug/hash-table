@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+<h1>Shared folder: <%= folder.name %></h1>
+<p class="meta">This link expires on <%= formatDate(link.expiresAt) %>.</p>
+
+<% if (folder.files.length === 0) { %>
+  <p>This folder is empty.</p>
+<% } else { %>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Size</th><th>Uploaded</th><th></th></tr>
+      </thead>
+      <tbody>
+        <% folder.files.forEach((file) => { %>
+          <tr>
+            <td><%= file.name %></td>
+            <td><%= formatBytes(file.size) %></td>
+            <td><%= formatDate(file.uploadedAt) %></td>
+            <td><a href="/share/<%= link.id %>/files/<%= file.id %>/download">Download</a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+
+<%- include("../partials/footer") %>

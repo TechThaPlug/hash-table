@@ -1,0 +1,102 @@
+Anthony W. Maina | Software Developer Resume
+
+ Anthony W. Maina
+
+ Junior Full-Stack Developer
+
+ Nairobi, Kenya
+
+ monyoski888@gmail.com (mailto:monyoski888@gmail.com)
+
+ GitHub (https://github.com/TechThaPlug)
+ Portfolio (https://techthaplug.github.io/)
+
+ Professional Summary
+
+ Aspiring full-stack developer focused on building responsive web
+ applications and practical software projects. Experienced in working
+ with JavaScript, Node.js, Express.js, PostgreSQL and Prisma through
+ hands-on development. Interested in writing maintainable code,
+ implementing secure application features, developing reliable backend
+ systems and continuously improving software engineering skills.
+
+ Technical Skills
+
+ Languages:
+ JavaScript, HTML5, CSS3
+
+ Backend:
+ Node.js, Express.js
+
+ Databases:
+ PostgreSQL, Prisma ORM
+
+ Tools:
+ Git, GitHub, VS Code, npm
+
+ Development:
+ REST APIs, authentication, responsive web design, testing, debugging
+ and application security
+
+ Projects
+
+ Odin Book
+
+ Social Networking Application
+
+ Developed a full-stack social networking application with user
+ accounts, authentication and profile functionality.
+
+ Technologies:
+ JavaScript, Node.js, Express.js, PostgreSQL and Prisma.
+
+ GitHub Repository
+ (https://github.com/TechThaPlug/odin-book)
+
+ Odin Messaging App
+
+ Messaging Application
+
+ Built a messaging application with authenticated user access and
+ protected application routes.
+
+ Developed backend functionality for conversations and messages, with
+ security checks and automated tests for protected endpoints.
+
+ Technologies:
+ JavaScript, Node.js, Express.js and backend testing.
+
+ GitHub Repository
+ (https://github.com/TechThaPlug/odin-messaging-app)
+
+ Odin Where's Waldo
+
+ Interactive Browser Game
+
+ Developed an interactive browser-based object-finding game with game
+ logic and backend functionality.
+
+ Worked with database-backed application functionality using
+ PostgreSQL and Prisma.
+
+ Technologies:
+ JavaScript, Node.js, Express.js, PostgreSQL and Prisma.
+
+ GitHub Repository
+ (https://github.com/TechThaPlug/odin-wheres-waldo)
+
+ Education
+
+ Massachusetts Institute of Technology (MIT)
+
+ Master's Degree in Computer Science and Artificial Intelligence
+
+ Egerton University
+
+ Bachelor's Degree in Computer Science
+
+ Professional Development
+
+ Continuously developing full-stack programming skills through
+ practical projects, independent learning, debugging and software
+ development exercises.

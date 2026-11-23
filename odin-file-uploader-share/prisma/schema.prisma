@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model File {
+  id           String   @id
+  originalName String
+  storedName   String
+  mimeType     String
+  size         Int
+  storageUrl   String?
+  localPath    String?
+  provider     String   @default("local")
+  uploadedAt   DateTime @default(now())
+  userId       String
+  folderId     String?
+  Folder       Folder?  @relation(fields: [folderId], references: [id])
+  User         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Folder {
+  id           String         @id
+  name         String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime
+  userId       String
+  parentId     String?
+  File         File[]
+  Folder       Folder?        @relation("FolderToFolder", fields: [parentId], references: [id], onDelete: Cascade)
+  other_Folder Folder[]       @relation("FolderToFolder")
+  User         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  SharedFolder SharedFolder[]
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+}
+
+model SharedFolder {
+  id        String   @id
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  folderId  String
+  userId    String
+  Folder    Folder   @relation(fields: [folderId], references: [id], onDelete: Cascade)
+  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id           String         @id
+  name         String?
+  email        String         @unique
+  password     String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime
+  File         File[]
+  Folder       Folder[]
+  SharedFolder SharedFolder[]
+}

@@ -1,0 +1,79 @@
+=================================================================
+                 TRAVEL WEATHER PLANNER
+                    WEATHER REPORT
+=================================================================
+Destination: Nairobi
+Country: Kenya
+Travel period: 2026-11-21 to 2026-11-29
+Duration: 9 day(s)
+Generated: 2026-11-20 16:03 UTC
+=================================================================
+
+DAILY WEATHER FORECAST
+-----------------------------------------------------------------
+Date: 2026-11-21
+Weather: Slight rain showers
+Temperature: 16.7 to 22.9°C
+Rain probability: 97%
+Maximum wind speed: 15.1 km/h
+-----------------------------------------------------------------
+Date: 2026-11-22
+Weather: Moderate rain showers
+Temperature: 16.6 to 21.6°C
+Rain probability: 100%
+Maximum wind speed: 18.2 km/h
+-----------------------------------------------------------------
+Date: 2026-11-23
+Weather: Moderate rain showers
+Temperature: 16.6 to 21.9°C
+Rain probability: 100%
+Maximum wind speed: 17.7 km/h
+-----------------------------------------------------------------
+Date: 2026-11-24
+Weather: Dense drizzle
+Temperature: 16.7 to 23.8°C
+Rain probability: 85%
+Maximum wind speed: 16.5 km/h
+-----------------------------------------------------------------
+Date: 2026-11-25
+Weather: Light drizzle
+Temperature: 16.0 to 24.8°C
+Rain probability: 73%
+Maximum wind speed: 12.8 km/h
+-----------------------------------------------------------------
+Date: 2026-11-26
+Weather: Moderate drizzle
+Temperature: 15.5 to 24.7°C
+Rain probability: 71%
+Maximum wind speed: 15.3 km/h
+-----------------------------------------------------------------
+Date: 2026-11-27
+Weather: Moderate drizzle
+Temperature: 16.4 to 22.9°C
+Rain probability: 85%
+Maximum wind speed: 14.3 km/h
+-----------------------------------------------------------------
+Date: 2026-11-28
+Weather: Light drizzle
+Temperature: 16.8 to 23.9°C
+Rain probability: 80%
+Maximum wind speed: 17.3 km/h
+-----------------------------------------------------------------
+Date: 2026-11-29
+Weather: Light drizzle
+Temperature: 15.7 to 24.1°C
+Rain probability: 57%
+Maximum wind speed: 17.3 km/h
+-----------------------------------------------------------------
+
+PACKING RECOMMENDATIONS
+-----------------------------------------------------------------
+1. Pack a light jacket or sweater.
+2. Pack comfortable, breathable clothing.
+3. Pack an umbrella or waterproof raincoat.
+4. Prepare for a high chance of rain.
+5. Carry personal essentials, identification, and travel documents.
+
+=================================================================
+Travel smart. Stay prepared. Enjoy your journey!
+=================================================================

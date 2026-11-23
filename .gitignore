@@ -1,0 +1,46 @@
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and coverage files
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+
+# Editors
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and coverage files
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+
+# Editors
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+<%- include("../partials/header") %>
+
+<h1>My folders</h1>
+
+<form method="POST" action="/folders" class="row">
+  <label class="sr-only" for="name">Folder name</label>
+  <input id="name" name="name" type="text" required maxlength="60" placeholder="New folder name">
+  <button type="submit">Create folder</button>
+</form>
+
+<% if (folders.length === 0) { %>
+  <p>You have no folders yet. Create your first one above.</p>
+<% } else { %>
+  <ul class="card-grid">
+    <% folders.forEach((folder) => { %>
+      <li class="card">
+        <h2><a href="/folders/<%= folder.id %>"><%= folder.name %></a></h2>
+        <p class="meta"><%= folder._count.files %> <%= folder._count.files === 1 ? "file" : "files" %></p>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,79 @@
+<%- include("../partials/header") %>
+
+<p><a href="/folders">&larr; All folders</a></p>
+<h1><%= folder.name %></h1>
+
+<section class="panel">
+  <h2>Upload a file</h2>
+  <form method="POST" action="/folders/<%= folder.id %>/files" enctype="multipart/form-data" class="row">
+    <label class="sr-only" for="file">File</label>
+    <input id="file" name="file" type="file" required accept=".jpg,.jpeg,.png,.gif,.webp,.pdf,.txt">
+    <button type="submit">Upload</button>
+  </form>
+  <p class="meta">JPEG, PNG, GIF, WebP, PDF, or plain text. Up to 5 MB.</p>
+</section>
+
+<section class="panel">
+  <h2>Files</h2>
+  <% if (folder.files.length === 0) { %>
+    <p>This folder is empty.</p>
+  <% } else { %>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Size</th><th>Uploaded</th></tr>
+        </thead>
+        <tbody>
+          <% folder.files.forEach((file) => { %>
+            <tr>
+              <td><a href="/files/<%= file.id %>"><%= file.name %></a></td>
+              <td><%= formatBytes(file.size) %></td>
+              <td><%= formatDate(file.uploadedAt) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  <% } %>
+</section>
+
+<section class="panel">
+  <h2>Share this folder</h2>
+  <p class="meta">Anyone with the link can view and download everything in this folder until the link expires.</p>
+
+  <form method="POST" action="/folders/<%= folder.id %>/share" class="row">
+    <label class="sr-only" for="duration">Link duration</label>
+    <select id="duration" name="duration">
+      <option value="1d">1 day</option>
+      <option value="3d">3 days</option>
+      <option value="7d" selected>7 days</option>
+      <option value="10d">10 days</option>
+      <option value="30d">30 days</option>
+    </select>
+    <button type="submit">Create link</button>
+  </form>
+
+  <% if (shareLinks.length > 0) { %>
+    <ul class="links">
+      <% shareLinks.forEach((link) => { %>
+        <li>
+          <a href="<%= link.url %>"><%= link.url %></a>
+          <span class="meta">expires <%= formatDate(link.expiresAt) %></span>
+          <form method="POST" action="/share-links/<%= link.id %>/delete" class="inline">
+            <button type="submit" class="danger small">Remove</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
+
+<section class="panel">
+  <h2>Delete folder</h2>
+  <p class="meta">This permanently deletes the folder and every file in it.</p>
+  <form method="POST" action="/folders/<%= folder.id %>/delete" onsubmit="return confirm('Delete this folder and all its files?');">
+    <button type="submit" class="danger">Delete folder</button>
+  </form>
+</section>
+
+<%- include("../partials/footer") %>

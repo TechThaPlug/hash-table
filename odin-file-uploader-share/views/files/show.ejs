@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+
+<p><a href="/folders/<%= file.folder.id %>">&larr; <%= file.folder.name %></a></p>
+<h1><%= file.name %></h1>
+
+<% if (file.mimeType.startsWith("image/")) { %>
+  <img class="preview" src="<%= file.url %>" alt="<%= file.name %>">
+<% } %>
+
+<dl>
+  <dt>Name</dt>
+  <dd><%= file.name %></dd>
+  <dt>Type</dt>
+  <dd><%= file.mimeType %></dd>
+  <dt>Size</dt>
+  <dd><%= formatBytes(file.size) %></dd>
+  <dt>Uploaded</dt>
+  <dd><%= formatDate(file.uploadedAt) %></dd>
+  <dt>Folder</dt>
+  <dd><a href="/folders/<%= file.folder.id %>"><%= file.folder.name %></a></dd>
+</dl>
+
+<div class="row">
+  <a class="button" href="/files/<%= file.id %>/download">Download</a>
+
+  <form method="POST" action="/files/<%= file.id %>/delete" onsubmit="return confirm('Delete this file?');">
+    <button type="submit" class="danger">Delete</button>
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

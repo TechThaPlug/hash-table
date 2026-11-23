@@ -1,0 +1,16 @@
+{
+  "name": "odin-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "node scripts/check-resume.js",
+    "text": "node scripts/make-text.js",
+    "pdf": "\"C:\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=Anthony-W-Maina-Resume.pdf file:///C:/Users/User/repos/odin-resume/resume.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
